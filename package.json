@@ -1,0 +1,19 @@
+{
+  "name": "poe-kafka-comsumer",
+  "version": "1.0.0",
+  "description": "poe-kafka-comsumer",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexanderkeidel/poe-kafka-comsumer.git"
+  },
+  "author": "alexanderkeidel@icloud.com",
+  "license": "CC-BY-4.0",
+  "bugs": {
+    "url": "https://github.com/alexanderkeidel/poe-kafka-comsumer/issues"
+  },
+  "homepage": "https://github.com/alexanderkeidel/poe-kafka-comsumer#readme"
+}
