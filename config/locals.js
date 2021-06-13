@@ -1,3 +1,5 @@
+f = require('util').format
+
 let locals = [];
 
 locals.appName = "poe-kafka-consumer"
@@ -27,4 +29,8 @@ locals.swaggerJsDocOptions = {
 	},
 	apis: ["./routes/*.js"],
 };
+locals.mongoUser = encodeURIComponent('your_mongo_user');
+locals.mongoPassword = encodeURIComponent('your_mongo_pw');
+locals.mongoAuthMechanism = 'DEFAULT';
+locals.mongoUrl = f('mongodb://%s:%s@localhost:27017/?authSource=admin&readPreference=primary&ssl=false&useUnifiedTopology=true', locals.mongoUser, locals.mongoPassword, locals.mongoAuthMechanism);
 module.exports = locals;
