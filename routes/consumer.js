@@ -2,6 +2,7 @@
 const express = require('express');
 const swaggerUi = require('swagger-ui-express');
 //const swaggerDocument = require('./swagger.json');
+//const myEventHandler = require('../tools/events');
 const swaggerJsdoc = require('swagger-jsdoc');
 const router = express.Router();
 
@@ -84,6 +85,8 @@ const router = express.Router();
 	try {
         req.app.locals.active = req.body.active;
         req.app.locals.logging = req.body.logging;
+        req.app.locals.eventEmitter.emit('active-'+req.body.active,req.app.locals.consumer);
+        req.app.locals.eventEmitter.emit('logging-'+req.body.logging,);
         res.send({
             'active': req.app.locals.active,
             'logging': req.app.locals.logging

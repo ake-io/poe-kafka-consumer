@@ -7,10 +7,10 @@ locals.logging = true;
 locals.appWatchDogSleepTime = 5000;
 locals.next_change_id='';
 locals.PORT = process.env.PORT || 3001;
-//locals.kafkaProducerName = locals.appName;
-//locals.kafkaHostName = "host.docker.internal";
-//locals.kafkaPort = "9092";
-//locals.kafkaHost = [locals.kafkaHostName+":"+locals.kafkaPort];
+locals.kafkaComsumerName = locals.appName;
+locals.kafkaHostName = "host.docker.internal";
+locals.kafkaPort = "9092";
+locals.kafkaHost = [locals.kafkaHostName+":"+locals.kafkaPort];
 locals.swaggerJsDocOptions = {
 	definition: {
 		openapi: "3.0.0",

@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/alexanderkeidel/poe-kafka-consumer#readme",
   "dependencies": {
+    "events-async": "^1.2.1",
     "express": "^4.17.1",
+    "kafkajs": "^1.15.0",
     "mongodb": "^3.6.9",
     "nodemon": ">2.0.0",
     "swagger-jsdoc": "^6.1.0",
