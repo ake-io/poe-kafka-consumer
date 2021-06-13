@@ -12,7 +12,7 @@ app.locals = locals;
 app.locals.consumer = new ExpressAppKafka({
     "clientId": app.locals.kafkaConsumerName,
     "brokers": app.locals.kafkaHost
-});
+},app.locals);
 app.locals.producer = new ExpressAppMongo(locals.mongoUrl);
 app.locals.eventEmitter = new events.EventEmitter();
 app.locals.eventEmitter.on('kafka-active-true', app.locals.consumer.myEventHandlerActiveTrue);

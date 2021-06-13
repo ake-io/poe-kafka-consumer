@@ -6,19 +6,28 @@ class ExpressAppMongo extends MongoClient {
     processing = false;
     mongo_db;
 
+    async pingDB(){
+        await this.db("admin").command({ ping: 1 });
+        console.log("ExpressAppMongo: Pinged successfully to database");
+    }
+    async insert(data){
+        var myobj = data;
+        await this.db("poe-public-stash-items")
+        .collection("stashes")
+        .insertOne(myobj, function(err, res) { if (err) throw err;})
+        // 
+        //          dbo.collection("stashes").insertOne(myobj, function(err, res) {
+        //               if (err) throw err;
+        //             })
+    }
+
     myEventHandlerActiveTrue = function (producer) {
         producer.wakeUp();
       }
     myEventHandlerActiveFalse = function (producer) {
         producer.sleep();
       }  
-    
-    setDatabase(err,db,a) {
-        if(err) throw err;
-        console.log(a);
-        //this.mongo_db = db;    
-    }
-    
+        
     async wakeUp() {
         try{
             if (!this.active){
@@ -41,14 +50,15 @@ class ExpressAppMongo extends MongoClient {
             if(this.active){
                 console.log("ExpressAppMongo: Ich lege mich schlafen")
                 this.active = false;
-                
+                this.close();
+                console.log("ExpressAppMongo: Disconnected!")
             }
         } catch (error) {
             console.log(error)
-
-        } finally {
             this.close();
             console.log("ExpressAppMongo: Disconnected!")
+        } finally {
+
         }
     }
     getStatus() {
