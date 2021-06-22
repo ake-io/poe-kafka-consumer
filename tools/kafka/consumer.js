@@ -31,7 +31,7 @@ class ExpressAppKafka extends Kafka {
                 })
                 await this.consumer.run({
                     "eachMessage": async result => {
-                        //console.log(`RVD Msg ${result.message.value} on partition ${result.partition}`)
+                        console.log(`RVD Msg ${result.message.value} on partition ${result.partition}`)
                         this.locals.producer.insert({ message: result.message.value });
 
                     }

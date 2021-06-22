@@ -1,0 +1,36 @@
+{
+    "verified":false,
+    "w":1,
+    "h":1,
+    "icon":"https://web.poecdn.com/image/Art/2DItems/Jewels/basicdex.png?v=7375b3bb90a9809870b31d1aa4aa68b9&w=1&h=1&scale=1",
+    "league":"Ultimatum",
+    "id":"d58e99beed05342e5d2ec42381a2b96e1fbd5a998ffaf5c5be656ec99c7d736a",
+    "name":"Brood Eye",
+    "typeLine":"Viridian Jewel",
+    "baseType":"Viridian Jewel",
+    "identified":true,
+    "ilvl":81,
+    "note":"~price 20 chaos",
+    "corrupted":true,
+    "requirements":[
+        {
+            "name":"Level",
+            "values":[["32",0]],
+            "displayMode":0
+        }],
+    "implicitMods":[
+        "7% increased Effect of Non-Damaging Ailments",
+        "You cannot be Hindered"
+        ],
+    "explicitMods":[
+        "16% increased Damage with Swords",
+        "+9% to Global Critical Strike Multiplier",
+        "+14% to Cold Resistance"
+        ],
+    "descrText":"Place into an allocated Jewel Socket on the Passive Skill Tree. Right click to remove from the Socket.",
+    "frameType":2,
+    "extended":{"category":"jewels","prefixes":1,"suffixes":2,"baseType":"Viridian Jewel"},
+    "x":9,
+    "y":23,
+    "inventoryId":"Stash193"
+}
